@@ -25,7 +25,7 @@ sent to a printer in the displayed format. Finally, beav can even
 handle files that are bigger than memory.
 
 %description -l pl
-Beav pozwala Ci edytoraæ pliki binarne w trybie pe³noekranowym. Beav
+Beav pozwala Ci edytowaæ pliki binarne w trybie pe³noekranowym. Beav
 potrafi edytowaæ pliki, wyszukiwaæ i zastêpowaæ w trybach
 heksadecymalnym, ASCII, EBCDIC, ósemkowym, dziesiêtnym oraz binarnym.
 Dane mog± byæ wy¶wietlane jako bajt, word lub double. Dane word oraz
