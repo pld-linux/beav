@@ -11,7 +11,7 @@ Patch0:		%{name}-glibc.patch
 Patch1:		%{name}-linux.patch
 Patch2:		%{name}-tinfo.patch
 BuildRequires:	unzip
-Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Beav allows you to edit binary files with almost all of the
