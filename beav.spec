@@ -1,4 +1,4 @@
-Summary:	A binary editor with Emacs-like keybindings.
+Summary:	A binary editor with Emacs-like keybindings
 Summary(pl):	Binarny edytor z klawiszologi± zbli¿on± do Emacsa
 Name:		beav
 Version:	1.40
@@ -46,7 +46,7 @@ unzip -L -q -aa %{SOURCE0}
 
 %build
 %{__make} -f makefile.uxv \
-	CFLAGS="$RPM_OPT_FLAGS -DUNIX -DSYSV %{!?debug:-s}"
+	CFLAGS="%{rpmcflags} -DUNIX -DSYSV %{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
