@@ -1,0 +1,11 @@
+--- beav-1.40/tcap.c.glibc	Wed Nov 26 14:01:28 1997
++++ beav-1.40/tcap.c	Wed Nov 26 14:01:38 1997
+@@ -37,7 +37,7 @@
+ char *UP, PC, *CM, *CE, *CL, *SO, *SE, *TI, *TE;	/* DR */
+ 
+ #ifdef linux
+-#include <termios.h>
++#include <asm/termios.h>
+ struct winsize ttysize;
+ #endif
+ 

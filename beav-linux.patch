@@ -1,0 +1,79 @@
+--- beav-1.40/def.h.msf	Mon Apr 28 17:20:42 1997
++++ beav-1.40/def.h	Mon Apr 28 17:23:37 1997
+@@ -560,9 +560,14 @@
+ /*
+  * Standard I/O.
+  */
++#ifndef linux
+ extern char *malloc ();
+ extern char *strcpy ();
+ extern char *strcat ();
++#else
++#include <stdio.h>
++#include <string.h>
++#endif
+ 
+ #ifndef NOPROTO
+ #include "prototyp.h"
+--- beav-1.40/prototyp.h.msf	Mon Apr 28 17:23:58 1997
++++ beav-1.40/prototyp.h	Mon Apr 28 17:24:42 1997
+@@ -55,9 +55,11 @@
+ extern void update (void);
+ extern unsigned int get_currow (struct WINDOW *wp);
+ extern unsigned int get_curcol (struct WINDOW *wp);
++#ifndef linux
+ extern void mem_line (int row, struct vid *vvp);
+ extern void ucopy (struct vid *vvp, struct vid *pvp);
+ extern void uline (int row, struct vid *vvp, struct vid *pvp);
++#endif
+ extern void modeline (struct WINDOW *wp);
+ extern void writ_echo (char *buf);
+ extern char print (void);
+@@ -203,7 +205,9 @@
+ extern void ttykeymapinit (void);
+ extern char *keystrings (int key);
+ extern void is_wang (void);
++#ifndef linux
+ extern int getsysconfig (union REGS *outregs, struct SREGS *segregs);
++#endif
+ extern char getscreenstate (void);
+ extern char reposition (void);
+ extern char nextwind (void);
+--- beav-1.40/tcap.c.orig	Fri Apr 16 13:29:48 1993
++++ beav-1.40/tcap.c	Mon Apr 28 17:31:28 1997
+@@ -36,6 +36,11 @@
+ char tcapbuf[TCAPSLEN];
+ char *UP, PC, *CM, *CE, *CL, *SO, *SE, *TI, *TE;	/* DR */
+ 
++#ifdef linux
++#include <termios.h>
++struct winsize ttysize;
++#endif
++
+ #ifdef BSD
+ #include <sys/ioctl.h>
+ struct winsize ttysize;
+@@ -84,6 +89,14 @@
+ 	exit (1);
+     }
+ 
++#ifdef linux
++    if (ioctl (0, TIOCGWINSZ, &ttysize) == 0
++        && ttysize.ws_row > 0) {
++            nrow = ttysize.ws_row;
++            ncol = ttysize.ws_col;
++    }
++    else
++#endif
+ 
+ #ifdef BSD
+ #ifdef ULTRIX
+@@ -110,7 +123,7 @@
+ 	ttclose ();		/* fix in 1.13 */
+ 	exit (1);
+     }
+-    printf ("nrow %d, ncol %d\n", nrow, ncol);
++    /* printf ("nrow %d, ncol %d\n", nrow, ncol); */
+ 
+     if ((ncol = (short) tgetnum ("co")) == -1)
+     {
