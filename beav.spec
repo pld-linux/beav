@@ -22,25 +22,29 @@ While displaying words or double words, the data can be displayed in
 Intel's or Motorola's byte swap format. Data of any length can be
 inserted at any point in the file and the source of the data can be
 the keyboard, another buffer, or a file. Any displayed data can be
-sent to a printer in the displayed format. Finally, beav can even
+sent to a printer in the displayed format. Finally, Beav can even
 handle files that are bigger than memory.
 
 %description -l pl
-Beav pozwala Ci edytowaæ pliki binarne w trybie pe³noekranowym. Beav
-potrafi edytowaæ pliki, wyszukiwaæ i zastêpowaæ w trybach
+Beav umo¿liwia edycjê plików binarnych w trybie pe³noekranowym. Beav
+potrafi modyfikowaæ pliki, wyszukiwaæ i zastêpowaæ w trybach
 heksadecymalnym, ASCII, EBCDIC, ósemkowym, dziesiêtnym oraz binarnym.
-Dane mog± byæ wy¶wietlane jako bajt, word lub double. Dane word oraz
-double word dane mog± byæ wy¶wietlane w formacie ,,byte swap'' Intela
-lub Motorolli. Beav potrafi edytowaæ pliki o wielko¶ci wiêkszej ni¿
-dostêpna fizycznie pamiêæ.
+Dane mog± byæ wy¶wietlane jako bajt, s³owo lub podwójne s³owo. Dane w
+postaci s³owa lub podwójnego s³owa mog± byæ wy¶wietlone w formacie
+Intela lub Motoroli ze zmienion± kolejno¶ci± bajtów. W dowolnym
+miejscu pliku mo¿na wstawiæ dane dowolnej d³ugo¶ci pochodz±ce z
+klawiatury, innego bufora lub pliku. Dowolne wy¶wietlane dane mog± byæ
+wys³ane na drukarkê w wy¶wietlanym formacie. Beav jest w stanie
+obs³ugiwaæ nawet pliki nawet wiêksze ni¿ rozmiar pamiêci.
+
 
 %prep
-%setup -q -T -c
+%setup -q -c -T
 unzip -L -q -aa %{SOURCE0}
 
-%patch1 -p1 -b glibc
-%patch0 -p1 -b linux
-%patch2 -p1 -b tinfo
+%patch1 -p1
+%patch0 -p1
+%patch2 -p1
 
 %build
 %{__make} -f makefile.uxv \
