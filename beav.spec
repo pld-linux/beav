@@ -37,7 +37,7 @@ dostêpna fizycznie pamiêæ.
 %setup -q -T -c
 unzip -L -q -aa %{SOURCE0}
 
-%patch1 -p1 -b glibc 
+%patch1 -p1 -b glibc
 %patch0 -p1 -b linux
 %patch2 -p1 -b tinfo
 
@@ -53,7 +53,7 @@ install beav $RPM_BUILD_ROOT%{_bindir}
 
 gzip -9nf *.txt
 
-%clean 
+%clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
