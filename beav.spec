@@ -2,7 +2,7 @@ Summary:	A binary editor with Emacs-like keybindings
 Summary(pl):	Binarny edytor z klawiszologi± zbli¿on± do Emacsa
 Name:		beav
 Version:	1.40
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Editors
 Source0:	ftp://ftp.cdrom.com/pub/simtelnet/msdos/binaryed/%{name}140s.zip
