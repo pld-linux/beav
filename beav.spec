@@ -5,9 +5,6 @@ Version:	1.40
 Release:	2
 License:	GPL
 Group:		Applications/Editors
-Group(de):	Applikationen/Editors
-Group(pl):	Aplikacje/Edytory
-Group(pt):	Aplicações/Editores
 Source0:	ftp://ftp.cdrom.com/pub/simtelnet/msdos/binaryed/%{name}140s.zip
 Patch0:		%{name}-glibc.patch
 Patch1:		%{name}-linux.patch
