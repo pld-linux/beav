@@ -10,6 +10,7 @@ Source0:	ftp://ftp.cdrom.com/pub/simtelnet/msdos/binaryed/%{name}140s.zip
 Patch0:		%{name}-glibc.patch
 Patch1:		%{name}-linux.patch
 Patch2:		%{name}-tinfo.patch
+BuildRequires:	ncurses-devel
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
