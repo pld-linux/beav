@@ -1,5 +1,5 @@
 Summary:	A binary editor with Emacs-like keybindings
-Summary(pl.UTF-8):   Binarny edytor z klawiszologią zbliżoną do Emacsa
+Summary(pl.UTF-8):	Binarny edytor z klawiszologią zbliżoną do Emacsa
 Name:		beav
 Version:	1.40
 Release:	4
