@@ -1,5 +1,5 @@
 Summary:	A binary editor with Emacs-like keybindings
-Summary(pl):	Binarny edytor z klawiszologi± zbli¿on± do Emacsa
+Summary(pl.UTF-8):   Binarny edytor z klawiszologiÄ… zbliÅ¼onÄ… do Emacsa
 Name:		beav
 Version:	1.40
 Release:	4
@@ -26,17 +26,17 @@ the keyboard, another buffer, or a file. Any displayed data can be
 sent to a printer in the displayed format. Finally, Beav can even
 handle files that are bigger than memory.
 
-%description -l pl
-Beav umo¿liwia edycjê plików binarnych w trybie pe³noekranowym. Beav
-potrafi modyfikowaæ pliki, wyszukiwaæ i zastêpowaæ w trybach
-heksadecymalnym, ASCII, EBCDIC, ósemkowym, dziesiêtnym oraz binarnym.
-Dane mog± byæ wy¶wietlane jako bajt, s³owo lub podwójne s³owo. Dane w
-postaci s³owa lub podwójnego s³owa mog± byæ wy¶wietlone w formacie
-Intela lub Motoroli ze zmienion± kolejno¶ci± bajtów. W dowolnym
-miejscu pliku mo¿na wstawiæ dane dowolnej d³ugo¶ci pochodz±ce z
-klawiatury, innego bufora lub pliku. Dowolne wy¶wietlane dane mog± byæ
-wys³ane na drukarkê w wy¶wietlanym formacie. Beav jest w stanie
-obs³ugiwaæ nawet pliki nawet wiêksze ni¿ rozmiar pamiêci.
+%description -l pl.UTF-8
+Beav umoÅ¼liwia edycjÄ™ plikÃ³w binarnych w trybie peÅ‚noekranowym. Beav
+potrafi modyfikowaÄ‡ pliki, wyszukiwaÄ‡ i zastÄ™powaÄ‡ w trybach
+heksadecymalnym, ASCII, EBCDIC, Ã³semkowym, dziesiÄ™tnym oraz binarnym.
+Dane mogÄ… byÄ‡ wyÅ›wietlane jako bajt, sÅ‚owo lub podwÃ³jne sÅ‚owo. Dane w
+postaci sÅ‚owa lub podwÃ³jnego sÅ‚owa mogÄ… byÄ‡ wyÅ›wietlone w formacie
+Intela lub Motoroli ze zmienionÄ… kolejnoÅ›ciÄ… bajtÃ³w. W dowolnym
+miejscu pliku moÅ¼na wstawiÄ‡ dane dowolnej dÅ‚ugoÅ›ci pochodzÄ…ce z
+klawiatury, innego bufora lub pliku. Dowolne wyÅ›wietlane dane mogÄ… byÄ‡
+wysÅ‚ane na drukarkÄ™ w wyÅ›wietlanym formacie. Beav jest w stanie
+obsÅ‚ugiwaÄ‡ nawet pliki nawet wiÄ™ksze niÅ¼ rozmiar pamiÄ™ci.
 
 
 %prep
