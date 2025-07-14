@@ -43,9 +43,9 @@ obsługiwać nawet pliki nawet większe niż rozmiar pamięci.
 %setup -q -c -T
 unzip -L -q -aa %{SOURCE0}
 
-%patch1 -p1
-%patch0 -p1
-%patch2 -p1
+%patch -P1 -p1
+%patch -P0 -p1
+%patch -P2 -p1
 
 %build
 %{__make} -f makefile.uxv \
